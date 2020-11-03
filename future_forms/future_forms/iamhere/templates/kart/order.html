@@ -1,0 +1,57 @@
+
+{%load static %}
+{%block content%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CART</title>
+  <link rel="stylesheet" href="{% static 'https://unpkg.com/flickity@2.0/dist/flickity.min.css' %}">
+  <link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %}" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+  div#first{
+  width:750px;
+  height:auto;
+  margin:50px auto 0;
+  padding:50px;
+  background-color:#EEE;
+  color:#333;
+  border:2px solid #C2D6FF;
+  border-radius:40px 0 40px 0
+  }
+  table,th,td {
+    border: 1px solid #111;
+    border-collapse: collapse;
+    margin :50px auto 0;
+    background-color: #EEE;
+  }
+  th {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  td {
+    padding: 5px;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<h1 style="text-align:center">Your Cart</h1>
+<h2> {{ note }} </h2>
+<div id="first">
+  <form action="results.html" method='post'>
+    {% csrf_token %}
+    <label for="firstname">First Name:</label>
+    <input  type="text" name="firstname"><br>
+    <label for="lastname">Last Name:</label>
+    <input type="text" name="lastname"><br>
+    <input type="submit" value="place order">
+  </form>
+</div>
+<br>
+
+&nbsp;&nbsp;<a href="{% url 'home' %}">Go Back</a>
+<body>
+</html>
+{%endblock%}
