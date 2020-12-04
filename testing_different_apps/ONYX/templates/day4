@@ -1,0 +1,77 @@
+variable
+=====================
+1.a,b,c,d------allowed
+2. total,subtotal,grandtotal-----allowed
+3.total1,key1,key2354 -----allowed
+4.grand_total,coaching_center, cinema_theatre,s_s_rajamouli,SSRajamouli,CinemaTheatre---allowed
+5.ca$h---not allowed
+6._mode---allowed
+7._ab_abc_abcd---allowed
+
+sep in print:
+===============
+print("this is praveen","this is testing",sep="------")
+
+output:
+this is praveen------this is testing
+
+format in print
+==================
+print("My name is {firstname}, I'm {age}".format(firstname = "praveen", age = 36))
+print("My name is {0}, I'm {1},totals {2}".format("praveen",36,24.56))
+print("My name is {0}, I'm {1},totals {total}".format("praveen",36,total=24.56))
+
+
+
+if and else:
+========================
+condition true if statements prints
+condition false then else statement prints
+
+a=0
+if a==1:
+    print("we will go movies")
+else :
+    print("indendation is also working fine")
+
+print("second friend sit in home")
+
+
+ex2:
+a="test"
+if a=="test":
+    print("this is if loop")
+    print("we will go movies")
+    print("we will go movies")
+    print("we will go movies")
+else :
+    print("this is else loop")
+
+print("second friend sit in home")
+
+example3:
+a=4
+budget=1
+alcohal=1
+beach=2
+if a==4:
+    if budget==1:
+        if alcohal==1:
+            print("we will drink")
+
+            if beach==1:
+                print("beach is empty")
+            else:
+                print("beach is very busy")
+
+        else:
+            print
+    else:
+        print("no goa sorry")
+
+else :
+    print("this is else loop")
+
+print("second friend sit in home")
+
+
